@@ -1,6 +1,8 @@
 package com.project.fitnessapp.services;
 
+import com.project.fitnessapp.models.FitnessProgram;
 import com.project.fitnessapp.models.Instructor;
+import com.project.fitnessapp.repositories.FitnessProgramRepository;
 import com.project.fitnessapp.repositories.InstructorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +13,22 @@ import java.util.List;
 public class InstructorService {
     @Autowired
     private InstructorRepository instructorRepository;
+    @Autowired
+    private FitnessProgramRepository fitnessProgramRepository;
 
     public List<Instructor> findAll() {
         return instructorRepository.findAll();
+    }
+
+    public List<FitnessProgram> getFitnessPrograms(Long instructorId) {
+        Instructor instructor = instructorRepository.findById(instructorId).orElseThrow();
+        return instructor.getFitnessPrograms();
+    }
+
+    public FitnessProgram addFitnessProgram(Long instructorId, FitnessProgram fitnessProgram) {
+        Instructor instructor = instructorRepository.findById(instructorId).orElseThrow();
+        instructor.getFitnessPrograms().add(fitnessProgram);
+        fitnessProgram.setInstructor(instructor);
+        return fitnessProgramRepository.save(fitnessProgram);
     }
 }

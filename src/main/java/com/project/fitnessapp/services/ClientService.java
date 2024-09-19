@@ -17,6 +17,10 @@ public class ClientService {
         return clientRepository.findAll();
     }
 
+    public Client getClient(Long id) {
+        return clientRepository.findById(id).orElseThrow();
+    }
+
     public List<FitnessProgram> getEnrolledPrograms(Long clientId) {
         Client client = clientRepository.findById(clientId).orElseThrow();
         return client.getEnrolledPrograms();

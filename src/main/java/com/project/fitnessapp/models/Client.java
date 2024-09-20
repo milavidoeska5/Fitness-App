@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @DiscriminatorValue("CLIENT")
-public class Client extends User{
+public class Client extends AppUser{
 
     @ManyToMany
     private List<FitnessProgram> enrolledPrograms=new ArrayList<>();

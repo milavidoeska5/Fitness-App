@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "user_type", discriminatorType = DiscriminatorType.STRING)
-public abstract class User {
+public abstract class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +23,7 @@ public abstract class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    public User(String name, String email, String password, Role role) {
+    public AppUser(String name, String email, String password, Role role) {
         this.name = name;
         this.email = email;
         this.password = password;

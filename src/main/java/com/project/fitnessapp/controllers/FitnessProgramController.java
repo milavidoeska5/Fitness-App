@@ -5,11 +5,13 @@ import com.project.fitnessapp.services.ClientService;
 import com.project.fitnessapp.services.FitnessProgramService;
 import com.project.fitnessapp.services.InstructorService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/programs")
 public class FitnessProgramController {
     private final InstructorService instructorService;
@@ -23,8 +25,10 @@ public class FitnessProgramController {
     }
 
     @GetMapping
-    public List<FitnessProgram> getAllPrograms() {
-        return fitnessProgramService.getAll();
+    public String getAllPrograms(Model model) {
+        List<FitnessProgram> programs = fitnessProgramService.getAll();
+        model.addAttribute("programs", programs);
+        return "programs";
     }
 
     @GetMapping("/{clientId}")

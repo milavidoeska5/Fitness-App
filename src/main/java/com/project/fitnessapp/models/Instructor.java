@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @DiscriminatorValue("INSTRUCTOR")
-public class Instructor extends User{
+public class Instructor extends AppUser{
 
     @OneToMany(mappedBy = "instructor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<FitnessProgram> fitnessPrograms = new ArrayList<>();

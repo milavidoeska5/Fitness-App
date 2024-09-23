@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fitness Programs</title>
+    <title>My programs</title>
 </head>
 <body>
-<a th:href="@{/programs/{clientId}(clientId=${clientId})}">
-    <button>My Programs</button>
-</a>
-<a >
-    <button>Logout</button>
-</a>
-<h1>Fitness Programs</h1>
+<h1>My Programs</h1>
 <table>
     <thead>
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Description</th>
         <th>Instructor</th>

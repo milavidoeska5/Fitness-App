@@ -13,8 +13,6 @@ import java.util.List;
 public class InstructorService {
     @Autowired
     private InstructorRepository instructorRepository;
-    @Autowired
-    private FitnessProgramRepository fitnessProgramRepository;
 
     public List<Instructor> findAll() {
         return instructorRepository.findAll();
@@ -25,10 +23,7 @@ public class InstructorService {
         return instructor.getFitnessPrograms();
     }
 
-    public FitnessProgram addFitnessProgram(Long instructorId, FitnessProgram fitnessProgram) {
-        Instructor instructor = instructorRepository.findById(instructorId).orElseThrow();
-        instructor.getFitnessPrograms().add(fitnessProgram);
-        fitnessProgram.setInstructor(instructor);
-        return fitnessProgramRepository.save(fitnessProgram);
+    public Instructor findById(Long instructorId) {
+        return instructorRepository.findById(instructorId).orElseThrow();
     }
 }

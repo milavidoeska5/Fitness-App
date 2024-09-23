@@ -1,6 +1,7 @@
 package com.project.fitnessapp.controllers;
 
 import com.project.fitnessapp.models.FitnessProgram;
+import com.project.fitnessapp.models.Instructor;
 import com.project.fitnessapp.services.ClientService;
 import com.project.fitnessapp.services.FitnessProgramService;
 import com.project.fitnessapp.services.InstructorService;
@@ -32,13 +33,27 @@ public class FitnessProgramController {
     }
 
     @GetMapping("/{clientId}")
-    public List<FitnessProgram> getProgramsByClientId(@PathVariable Long clientId) {
-        return clientService.getEnrolledPrograms(clientId);
+    public String getProgramsByClientId(@PathVariable Long clientId, Model model) {
+        List<FitnessProgram> clientPrograms = clientService.getEnrolledPrograms(clientId);
+        model.addAttribute("programs", clientPrograms);
+        model.addAttribute("clientId", clientId);
+        return "client-programs";
     }
 
     @GetMapping("/{instructorId}")
-    public List<FitnessProgram> getProgramsByInstructorId(@PathVariable Long instructorId) {
-        return instructorService.getFitnessPrograms(instructorId);
+    public String getProgramsByInstructorId(@PathVariable Long instructorId, Model model) {
+        List<FitnessProgram> instructorPrograms = instructorService.getFitnessPrograms(instructorId);
+        model.addAttribute("programs", instructorPrograms);
+        model.addAttribute("instructorId", instructorId);
+        return "instructor-programs";
+    }
+
+    @GetMapping("/{instructorId}/addProgram")
+    public String showAddProgramForm(@PathVariable Long instructorId, Model model) {
+        Instructor instructor = instructorService.findById(instructorId);
+        model.addAttribute("instructor", instructor);
+        model.addAttribute("fitnessProgram", new FitnessProgram());
+        return "addProgram";
     }
 
     @PostMapping("/{instructorId}/addProgram")
@@ -46,7 +61,7 @@ public class FitnessProgramController {
             @PathVariable Long instructorId,
             @RequestBody FitnessProgram fitnessProgram) {
 
-        FitnessProgram createdProgram = instructorService.addFitnessProgram(instructorId, fitnessProgram);
+        FitnessProgram createdProgram = fitnessProgramService.addProgram(instructorId, fitnessProgram);
         return ResponseEntity.ok(createdProgram);
     }
 }

@@ -30,4 +30,14 @@ public class FitnessProgram {
         this.description = description;
         this.instructor = instructor;
     }
+
+    @Override
+    public String toString() {
+        return "FitnessProgram{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", instructorId=" + (instructor != null ? instructor.getId() : null) +
+                '}';
+    }
 }

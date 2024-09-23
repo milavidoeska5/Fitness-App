@@ -19,4 +19,13 @@ public class Instructor extends AppUser{
         super(name, email, password,Role.INSTRUCTOR);
     }
 
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", fitnessProgramsCount=" + fitnessPrograms.size() +
+                '}';
+    }
 }

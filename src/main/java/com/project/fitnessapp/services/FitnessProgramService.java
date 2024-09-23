@@ -19,6 +19,10 @@ public class FitnessProgramService {
         return fitnessProgramRepository.findAll();
     }
 
+    public FitnessProgram getById(Long id) {
+        return fitnessProgramRepository.findById(id).orElseThrow();
+    }
+
     public FitnessProgram addProgram(Long instructorId, FitnessProgram fitnessProgram) {
         Instructor instructor = instructorService.findById(instructorId);
         fitnessProgram.setInstructor(instructor);

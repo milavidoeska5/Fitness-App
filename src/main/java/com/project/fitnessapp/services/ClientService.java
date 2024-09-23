@@ -25,4 +25,8 @@ public class ClientService {
         Client client = clientRepository.findById(clientId).orElseThrow();
         return client.getEnrolledPrograms();
     }
+
+    public Client addClient(Client client) {
+        return clientRepository.save(client);
+    }
 }

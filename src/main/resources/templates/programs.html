@@ -5,10 +5,11 @@
     <title>Fitness Programs</title>
 </head>
 <body>
-<a th:href="@{/programs/{clientId}(clientId=${clientId})}">
+<a th:if="${clientId != null}" th:href="@{/programs/client-programs/{clientId}(clientId=${clientId})}">
     <button>My Programs</button>
 </a>
-<a >
+
+<a th:href="@{/logout}">
     <button>Logout</button>
 </a>
 <h1>Fitness Programs</h1>
@@ -18,6 +19,7 @@
         <th>Name</th>
         <th>Description</th>
         <th>Instructor</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -25,6 +27,13 @@
         <td th:text="${program.title}"></td>
         <td th:text="${program.description}"></td>
         <td th:text="${program.instructor.name}"></td>
+        <td>
+            <form th:action="@{/programs/enroll}" method="post">
+                <input type="hidden" name="clientId" th:value="${clientId}" />
+                <input type="hidden" name="programId" th:value="${program.id}" />
+                <button type="submit">Apply</button>
+            </form>
+        </td>
     </tr>
     </tbody>
 </table>

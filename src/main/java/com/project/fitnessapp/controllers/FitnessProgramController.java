@@ -1,5 +1,6 @@
 package com.project.fitnessapp.controllers;
 
+import com.project.fitnessapp.models.Client;
 import com.project.fitnessapp.models.FitnessProgram;
 import com.project.fitnessapp.models.Instructor;
 import com.project.fitnessapp.services.ClientService;
@@ -26,13 +27,17 @@ public class FitnessProgramController {
     }
 
     @GetMapping
-    public String getAllPrograms(Model model) {
+    public String getAllPrograms(@RequestParam(required = false) Long clientId, Model model) {
         List<FitnessProgram> programs = fitnessProgramService.getAll();
         model.addAttribute("programs", programs);
+        if (clientId != null) {
+            model.addAttribute("clientId", clientId);  // Add clientId to the model
+        }
         return "programs";
     }
 
-    @GetMapping("/{clientId}")
+
+    @GetMapping("/client-programs/{clientId}")
     public String getProgramsByClientId(@PathVariable Long clientId, Model model) {
         List<FitnessProgram> clientPrograms = clientService.getEnrolledPrograms(clientId);
         model.addAttribute("programs", clientPrograms);
@@ -40,7 +45,7 @@ public class FitnessProgramController {
         return "client-programs";
     }
 
-    @GetMapping("/{instructorId}")
+    @GetMapping("/instructor-programs/{instructorId}")
     public String getProgramsByInstructorId(@PathVariable Long instructorId, Model model) {
         List<FitnessProgram> instructorPrograms = instructorService.getFitnessPrograms(instructorId);
         model.addAttribute("programs", instructorPrograms);
@@ -52,16 +57,36 @@ public class FitnessProgramController {
     public String showAddProgramForm(@PathVariable Long instructorId, Model model) {
         Instructor instructor = instructorService.findById(instructorId);
         model.addAttribute("instructor", instructor);
-        model.addAttribute("fitnessProgram", new FitnessProgram());
+        model.addAttribute("fitnessProgram", new FitnessProgram());  // Form-bound object
         return "addProgram";
     }
 
     @PostMapping("/{instructorId}/addProgram")
-    public ResponseEntity<FitnessProgram> addProgram(
+    public String addProgram(
             @PathVariable Long instructorId,
-            @RequestBody FitnessProgram fitnessProgram) {
+            @ModelAttribute FitnessProgram fitnessProgram, Model model) {
 
-        FitnessProgram createdProgram = fitnessProgramService.addProgram(instructorId, fitnessProgram);
-        return ResponseEntity.ok(createdProgram);
+        fitnessProgramService.addProgram(instructorId, fitnessProgram);
+        model.addAttribute("instructorId", instructorId);
+        return "redirect:/programs/instructor-programs/" + instructorId;
     }
+
+    @GetMapping("/client-info/{clientId}")
+    public String getClientInfo(@PathVariable Long clientId, Model model) {
+        Client client = clientService.getClient(clientId);
+        model.addAttribute("client", client);
+        return "client-info";
+    }
+
+    @PostMapping("/enroll")
+    public String enrollInProgram(@RequestParam Long clientId, @RequestParam Long programId) {
+        Client client = clientService.getClient(clientId);
+        FitnessProgram program = fitnessProgramService.getById(programId);
+        clientService.getEnrolledPrograms(clientId).add(program);
+        clientService.addClient(client);
+
+        return "redirect:/programs/client-programs/" + clientId;
+    }
+
+
 }

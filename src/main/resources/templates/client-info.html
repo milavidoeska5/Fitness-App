@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Information</title>
+</head>
+<body>
+<h1>Client Information</h1>
+
+<div>
+  <p><strong>Name:</strong> <span th:text="${client.name}"></span></p>
+  <p><strong>Email:</strong> <span th:text="${client.email}"></span></p>
+  <p><strong>Enrolled Programs:</strong></p>
+  <ul>
+    <li th:each="program : ${client.enrolledPrograms}">
+      <span th:text="${program.title}"></span>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

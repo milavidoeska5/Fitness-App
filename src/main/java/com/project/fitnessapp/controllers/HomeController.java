@@ -31,9 +31,11 @@ public class HomeController {
 
         if (user != null && user.getPassword().equals(password)) {
             if (user.getRole() == Role.INSTRUCTOR) {
-                return "redirect:/instructor-programs";
+                Long instructorId = user.getId();
+                return "redirect:/programs/instructor-programs/" + instructorId;
             } else if (user.getRole() == Role.CLIENT) {
-                return "redirect:/programs";
+                Long clientId = user.getId();
+                return "redirect:/programs?clientId=" + clientId;
             }
         } else {
             model.addAttribute("error", "Invalid email or password");
@@ -53,12 +55,20 @@ public class HomeController {
         AppUser newUser = appUserService.register(name, email, password, role);
 
         if (newUser.getRole() == Role.INSTRUCTOR) {
-            return "redirect:/instructor-programs";
+            Long instructorId = newUser.getId();
+            return "redirect:/programs/instructor-programs/" + instructorId;
         } else if (newUser.getRole() == Role.CLIENT) {
-            return "redirect:/programs";
+            Long clientId = newUser.getId();
+            return "redirect:/programs?clientId=" + clientId;
         }
 
         return "homepage";
     }
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "redirect:/";
+    }
+
 
 }

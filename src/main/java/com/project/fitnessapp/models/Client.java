@@ -19,4 +19,14 @@ public class Client extends AppUser{
         super(name, email, password, Role.CLIENT);
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", enrolledProgramsCount=" + enrolledPrograms.size() +
+                '}';
+    }
+
 }

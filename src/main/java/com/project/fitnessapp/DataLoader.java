@@ -46,11 +46,11 @@ public class DataLoader implements CommandLineRunner {
 
         // Create clients and enroll them in programs
         Client client1 = new Client("Klient 1", "klient1@gmail.com", "user123");
-        client1.getEnrolledPrograms().add(program1);
         Client client2 = new Client("Klient 2", "klient2@gmail.com", "user123");
+
+        client1.getEnrolledPrograms().add(program1);
         client2.getEnrolledPrograms().add(program2);
 
-        // Save clients
         clientRepository.save(client1);
         clientRepository.save(client2);
     }

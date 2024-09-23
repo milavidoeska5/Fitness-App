@@ -1,10 +1,19 @@
 package com.project.fitnessapp.controllers;
 
+import com.project.fitnessapp.models.AppUser;
+import com.project.fitnessapp.models.Role;
+import com.project.fitnessapp.services.AppUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
+    @Autowired
+    private AppUserService appUserService;
 
     @GetMapping("/")
     public String home() {
@@ -16,8 +25,40 @@ public class HomeController {
         return "login";
     }
 
+    @PostMapping("/login")
+    public String authenticate(@RequestParam String email, @RequestParam String password, Model model) {
+        AppUser user = appUserService.findByEmail(email);
+
+        if (user != null && user.getPassword().equals(password)) {
+            if (user.getRole() == Role.INSTRUCTOR) {
+                return "redirect:/instructor-programs";
+            } else if (user.getRole() == Role.CLIENT) {
+                return "redirect:/programs";
+            }
+        } else {
+            model.addAttribute("error", "Invalid email or password");
+        }
+        return "login";
+    }
+
     @GetMapping("/register")
     public String register() {
         return "register";
     }
+
+    @PostMapping("/register")
+    public String register(@RequestParam String name, @RequestParam String email,
+                           @RequestParam String password, @RequestParam Role role, Model model) {
+
+        AppUser newUser = appUserService.register(name, email, password, role);
+
+        if (newUser.getRole() == Role.INSTRUCTOR) {
+            return "redirect:/instructor-programs";
+        } else if (newUser.getRole() == Role.CLIENT) {
+            return "redirect:/programs";
+        }
+
+        return "homepage";
+    }
+
 }

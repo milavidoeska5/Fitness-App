@@ -13,8 +13,8 @@ public class AppUserService {
     @Autowired
     private AppUserRepository appUserRepository;
 
-    public AppUser findByEmail(String email) {
-        return appUserRepository.findByEmail(email);
+    public AppUser findByEmailAndPasswordUnsafe(String email,String password) {
+        return appUserRepository.findByEmailAndPasswordUnsafe(email, password);
     }
 
     public AppUser register(String name, String email, String password, Role role) {

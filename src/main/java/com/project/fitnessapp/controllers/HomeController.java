@@ -27,7 +27,7 @@ public class HomeController {
 
     @PostMapping("/login")
     public String authenticate(@RequestParam String email, @RequestParam String password, Model model) {
-        AppUser user = appUserService.findByEmail(email);
+        AppUser user = appUserService.findByEmailAndPasswordUnsafe(email,password);
 
         if (user != null && user.getPassword().equals(password)) {
             if (user.getRole() == Role.INSTRUCTOR) {

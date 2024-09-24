@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -86,6 +87,16 @@ public class FitnessProgramController {
         clientService.addClient(client);
 
         return "redirect:/programs/client-programs/" + clientId;
+    }
+
+    @PostMapping("/fetch-data")
+    public String fetchData(@RequestParam("url") String url, Model model) {
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        model.addAttribute("data", response.getBody());
+        return "fetched-data";
     }
 
 

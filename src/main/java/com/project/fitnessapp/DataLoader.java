@@ -29,7 +29,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Create instructors
-        Instructor instructor1 = new Instructor("Mila Vidoeska","admin@gmail.com", "admin123");
+        Instructor instructor1 = new Instructor("Mila Vidoeska","mv@gmail.com", "admin123");
         Instructor instructor2 = new Instructor("Mihaela Trajkovska", "mt@gmail.com", "admin123");
 
         // Save instructors

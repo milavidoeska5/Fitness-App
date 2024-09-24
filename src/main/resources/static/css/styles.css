@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Font for the entire application */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: #333; /* Dark text color */
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+h1 {
+    text-align: center; /* Center the main headings */
+    margin: 20px 0; /* Margin for spacing */
+    color: white; /* White text color for headings */
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db; /* Button color */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect for hover */
+    margin: 10px; /* Margin around buttons */
+    display: inline-block; /* Inline-block for buttons to sit next to each other */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Form Styles */
+form {
+    max-width: 600px; /* Center the form */
+    margin: 20px auto; /* Center the form on the page */
+    padding: 20px; /* Add padding around the form */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex; /* Flexbox for form layout */
+    flex-direction: column; /* Stack inputs vertically */
+}
+
+/* General Input and Label Styles */
+label {
+    display: block; /* Block level for labels */
+    margin-bottom: 5px; /* Spacing between label and input */
+    font-weight: bold; /* Bold font for labels */
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+}
+
+/* Table Styles */
+table {
+    width: 50%; /* Table width set to 50% */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin: 20px auto; /* Center table */
+    background-color: white; /* White background for table */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Light gray border for cells */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    background-color: white; /* White background for cells */
+    color: black; /* Black text color */
+}
+
+th {
+    background-color: #3498db; /* Header background color */
+    color: white; /* Header text color */
+}
+
+/* List Styles */
+ul {
+    padding-left: 20px; /* Indent list items */
+}
+
+/* Flex Centering for Specific Sections */
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content vertically */
+}

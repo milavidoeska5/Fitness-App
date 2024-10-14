@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Results</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Fetch Your Fitness Results</h1>
+
+<p>Please enter the URL of your fitness results.</p>
+
+<form th:action="@{/programs/fetch-data}" method="post">
+    <label for="url">Enter Results URL:</label>
+    <input type="text" id="url" name="url" required>
+    <button type="submit">Fetch Results</button>
+</form>
+
+<div th:if="${data}">
+    <h2>Fetched Results:</h2>
+    <pre th:text="${data}"></pre>
+</div>
+
+<div th:if="${data == null}">
+    <p>No results fetched yet.</p>
+</div>
+
+<div th:if="${error}">
+    <h2>Error:</h2>
+    <p th:text="${error}"></p>
+</div>
+</body>
+</html>

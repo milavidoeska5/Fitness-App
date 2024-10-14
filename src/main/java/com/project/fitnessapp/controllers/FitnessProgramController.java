@@ -89,15 +89,30 @@ public class FitnessProgramController {
         return "redirect:/programs/client-programs/" + clientId;
     }
 
+    @GetMapping("/fetch-data")
+    public String showFetchDataForm() {
+        return "fetch-data"; // Returns the template for fetching data
+    }
+
+
     @PostMapping("/fetch-data")
     public String fetchData(@RequestParam("url") String url, Model model) {
         RestTemplate restTemplate = new RestTemplate();
 
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        try {
+            // Directly fetch data from the provided URL without validation
+            ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-        model.addAttribute("data", response.getBody());
-        return "fetched-data";
+            // Add the fetched data to the model
+            model.addAttribute("data", response.getBody());
+        } catch (Exception e) {
+            // Handle errors gracefully
+            model.addAttribute("error", "Error fetching data: " + e.getMessage());
+        }
+
+        return "fetch-data"; // Return to the form with results or error
     }
+
 
 
 }

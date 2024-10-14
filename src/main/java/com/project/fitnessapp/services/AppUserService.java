@@ -30,4 +30,8 @@ public class AppUserService {
         }
         return null;
     }
+
+    public AppUser findByEmailUnsafe(String email) {
+        return appUserRepositoryVulnerable.findByEmailUnsafe(email);
+    }
 }

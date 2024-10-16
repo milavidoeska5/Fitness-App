@@ -1,23 +1,16 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif; /* Font for the entire application */
+    font-family: 'Nunito', sans-serif;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    background-color: #CBF3F0; /* Gradient background */
     color: #333; /* Dark text color */
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align items */
-    justify-content: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Header Styles */
-h1 {
-    text-align: center; /* Center the main headings */
-    margin: 20px 0; /* Margin for spacing */
-    color: white; /* White text color for headings */
-}
 
 /* Button Styles */
 button {

@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <title>Instructor Panel</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/instructor-programs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-<a th:href="@{/programs/{instructorId}/addProgram(instructorId=${instructorId})}">
-    <button>Add a program</button>
-</a>
-<a th:href="@{/logout}">
-    <button>Logout</button>
-</a>
-<h1>Current Programs</h1>
+<nav>
+    <div id="logo">
+        <img src="/img/logo-fitnessapp.png" alt="logo"/>
+    </div>
+    <div id="menu">
+        <a th:href="@{/programs/{instructorId}/addProgram(instructorId=${instructorId})}">
+            <button class="menu-buttons">Add a program</button>
+        </a>
+        <a th:href="@{/logout}">
+            <button class="menu-buttons">Logout</button>
+        </a>
+    </div>
+</nav>
 
-<div th:each="program : ${programs}">
-    <h2 th:text="${program.title}"></h2>
-    <p th:text="${program.description}"></p>
+<div id="main">
+    <h1>Current Programs</h1>
 
-    <h3>Enrolled Clients:</h3>
-    <ul>
-        <li th:each="client : ${program.clients}">
-            <span th:text="${client.name}"></span>
-            <a th:href="@{/programs/client-info/{clientId}(clientId=${client.id})}">
-                <button>View Client</button>
-            </a>
-        </li>
-    </ul>
+    <div th:each="program : ${programs}" class="cards">
+        <div class="card-header">
+            <h2 th:text="${program.title}"></h2>
+            <p th:text="${program.description}"></p>
+        </div>
+        <div class="card-body">
+            <h3>Enrolled Clients</h3>
+            <p th:each="client : ${program.clients}">
+                    <span th:text="${client.name}"></span>
+                    <a th:href="@{/programs/client-info/{clientId}(clientId=${client.id})}">
+                        <button class="card-buttons">View Client</button>
+                    </a>
+            </p>
+        </div>
+    </div>
 </div>
-
 </body>
 </html>

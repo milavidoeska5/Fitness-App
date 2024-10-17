@@ -17,36 +17,4 @@ input[type="text"], input[type="email"], input[type="password"] {
     margin-bottom: 15px; /* Space below inputs */
 }
 
-/* Table Styles */
-table {
-    width: 50%; /* Table width set to 50% */
-    border-collapse: collapse; /* Collapse borders for cleaner look */
-    margin: 20px auto; /* Center table */
-    background-color: white; /* White background for table */
-}
 
-th, td {
-    border: 1px solid #ccc; /* Light gray border for cells */
-    padding: 10px; /* Padding inside cells */
-    text-align: left; /* Align text to the left */
-    background-color: white; /* White background for cells */
-    color: black; /* Black text color */
-}
-
-th {
-    background-color: #3498db; /* Header background color */
-    color: white; /* Header text color */
-}
-
-/* List Styles */
-ul {
-    padding-left: 20px; /* Indent list items */
-}
-
-/* Flex Centering for Specific Sections */
-.centered-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-    justify-content: center; /* Center content vertically */
-}

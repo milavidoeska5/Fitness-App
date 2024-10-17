@@ -4,15 +4,32 @@
   <meta charset="UTF-8">
   <title>Client Information</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/client-info.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Client Information</h1>
+<nav>
+  <div id="logo">
+    <img src="/img/logo-fitnessapp.png" alt="logo"/>
+  </div>
+  <div id="menu">
+    <a th:href="@{/programs/{instructorId}/addProgram(instructorId=${instructorId})}">
+      <button class="menu-buttons">Add a program</button>
+    </a>
+    <a th:href="@{/logout}">
+      <button class="menu-buttons">Logout</button>
+    </a>
+  </div>
+</nav>
+<div id="main">
+  <h1>Client Information</h1>
 
-<div>
   <p><strong>Name:</strong> <span th:text="${client.name}"></span></p>
   <p><strong>Email:</strong> <span th:text="${client.email}"></span></p>
-  <p><strong>Enrolled Programs:</strong></p>
-  <ul>
+  <h3><strong>Enrolled Programs:</strong></h3>
+  <ul class="custom-bullets">
     <li th:each="program : ${client.enrolledPrograms}">
       <span th:text="${program.title}"></span>
     </li>

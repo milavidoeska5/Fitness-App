@@ -1,0 +1,61 @@
+h1{
+    font-family: 'Nunito', sans-serif;
+}
+
+form {
+    width: 20%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#form-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-button button{
+    color: #2EC4B6;
+    background-color: #FFFFFF;
+    border: 2px solid #2EC4B6;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+#form-button button:hover{
+    background-color: #2EC4B6;
+    border: 2px solid #2EC4B6;
+    color: #FFFFFF;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inputs input{
+    width: auto;
+}
+
+.options{
+    display: flex;
+}
+
+.options label{
+    margin-bottom: 0;
+}
+
+.options input{
+    margin-top: 0;
+}
+
+.options input[type="radio"] {
+    accent-color: #2EC4B6;
+}

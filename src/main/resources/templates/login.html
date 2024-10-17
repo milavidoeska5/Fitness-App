@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <title>Log In</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="logo">
+    <img src="/img/logo-fitnessapp.png" alt="logo"/>
+</div>
 <h1>Login</h1>
 <form action="#" th:action="@{/login}" method="post">
-    <div>
+    <div class="form-inputs">
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required th:value="${email}">
     </div>
-    <div>
+    <div class="form-inputs">
         <label for="password">Password:</label>
         <input type="text" id="password" name="password" required>
     </div>
-    <div>
+    <div id="form-button">
         <button type="submit">Login</button>
     </div>
 </form>

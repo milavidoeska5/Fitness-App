@@ -4,18 +4,33 @@
   <meta charset="UTF-8">
   <title>Add a program</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/addProgram.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+<nav>
+  <div id="logo">
+    <img src="/img/logo-fitnessapp.png" alt="logo"/>
+  </div>
+  <div id="menu">
+    <a th:href="@{/logout}">
+      <button class="menu-buttons">Logout</button>
+    </a>
+  </div>
+</nav>
+<h1>Add a new program</h1>
 <form action="#" th:action="@{/programs/{instructorId}/addProgram(instructorId=${instructorId})}" method="post">
-  <div>
+  <div class="form-inputs">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title" th:value="${fitnessProgram.title}" required>
   </div>
-  <div>
+  <div class="form-inputs">
     <label for="description">Description:</label>
     <input type="text" id="description" name="description" th:value="${fitnessProgram.description}" required>
   </div>
-  <div>
+  <div id="form-button">
     <button type="submit">Create</button>
   </div>
 </form>

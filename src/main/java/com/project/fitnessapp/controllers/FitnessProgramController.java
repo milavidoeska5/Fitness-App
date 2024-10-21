@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -32,7 +33,9 @@ public class FitnessProgramController {
         List<FitnessProgram> programs = fitnessProgramService.getAll();
         model.addAttribute("programs", programs);
         if (clientId != null) {
-            model.addAttribute("clientId", clientId);  // Add clientId to the model
+            model.addAttribute("clientId", clientId);
+            List<FitnessProgram> enrolledPrograms = clientService.getEnrolledPrograms(clientId);
+            model.addAttribute("enrolledPrograms", enrolledPrograms);
         }
         return "programs";
     }
@@ -83,10 +86,12 @@ public class FitnessProgramController {
     public String enrollInProgram(@RequestParam Long clientId, @RequestParam Long programId) {
         Client client = clientService.getClient(clientId);
         FitnessProgram program = fitnessProgramService.getById(programId);
-        clientService.getEnrolledPrograms(clientId).add(program);
-        clientService.addClient(client);
+        if(!clientService.getEnrolledPrograms(clientId).contains(program)){
+            clientService.getEnrolledPrograms(clientId).add(program);
+            clientService.addClient(client);
+        }
 
-        return "redirect:/programs/client-programs/" + clientId;
+        return "redirect:/programs?clientId=" + clientId;
     }
 
     @GetMapping("/fetch-data")

@@ -91,4 +91,15 @@ th {
     background-color: #FF9F1C;
     border: 2px solid #FF9F1C;
     font-weight: 600;
+    cursor: pointer;
+}
+
+#form-modified button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#form-modified button:disabled:hover {
+    background-color: #FFBF69;
+    box-shadow: none;
 }

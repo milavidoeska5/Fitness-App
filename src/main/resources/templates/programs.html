@@ -43,7 +43,7 @@
                 <form th:action="@{/programs/enroll}" method="post" id="form-modified">
                     <input type="hidden" name="clientId" th:value="${clientId}" />
                     <input type="hidden" name="programId" th:value="${program.id}" />
-                    <button type="submit">Apply</button>
+                    <button type="submit"  th:disabled="${enrolledPrograms.contains(program)}">Apply</button>
                 </form>
             </td>
         </tr>

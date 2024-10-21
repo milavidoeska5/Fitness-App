@@ -103,3 +103,10 @@ nav{
     border-radius: 20px;
     font-family: 'Nunito', sans-serif;
 }
+
+#cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}

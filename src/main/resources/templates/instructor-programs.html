@@ -27,19 +27,21 @@
 <div id="main">
     <h1>Current Programs</h1>
 
-    <div th:each="program : ${programs}" class="cards">
-        <div class="card-header">
-            <h2 th:text="${program.title}"></h2>
-            <p th:text="${program.description}"></p>
-        </div>
-        <div class="card-body">
-            <h3>Enrolled Clients</h3>
-            <p th:each="client : ${program.clients}">
+    <div id="cards-container">
+        <div th:each="program : ${programs}" class="cards">
+            <div class="card-header">
+                <h2 th:text="${program.title}"></h2>
+                <p th:text="${program.description}"></p>
+            </div>
+            <div class="card-body">
+                <h3>Enrolled Clients</h3>
+                <p th:each="client : ${program.clients}">
                     <span th:text="${client.name}"></span>
                     <a th:href="@{/programs/client-info/{clientId}(clientId=${client.id})}">
                         <button class="card-buttons">View Client</button>
                     </a>
-            </p>
+                </p>
+            </div>
         </div>
     </div>
 </div>

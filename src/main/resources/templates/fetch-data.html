@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <title>Fitness Results</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="logo">
+    <img src="/img/logo-fitnessapp.png" alt="logo"/>
+</div>
 <h1>Fetch Your Fitness Results</h1>
 
 <p>Please enter the URL of your fitness results.</p>
 
 <form th:action="@{/programs/fetch-data}" method="post">
     <label for="url">Enter Results URL:</label>
-    <input type="text" id="url" name="url" required>
-    <button type="submit">Fetch Results</button>
+    <div class="form-inputs">
+        <input type="text" id="url" name="url" required>
+    </div>
+    <div id="form-button">
+        <button type="submit">Fetch Results</button>
+    </div>
 </form>
 
 <div th:if="${data}">

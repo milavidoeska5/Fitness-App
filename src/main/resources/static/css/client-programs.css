@@ -55,7 +55,6 @@ table {
 
 th, td {
     border: 1px solid #2EC4B6;
-    padding: 10px;
     text-align: start;
     background-color: white;
     color: black;
@@ -65,4 +64,9 @@ th {
     text-align: center;
     background-color: #2EC4B6;
     color: white;
+    padding: 5px 10px;
+}
+
+td{
+    padding: 10px;
 }

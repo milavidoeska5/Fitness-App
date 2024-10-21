@@ -24,6 +24,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: end;
+    gap: 10px;
 }
 
 .menu-buttons{
@@ -79,6 +80,7 @@ th {
     font-family: 'Nunito', sans-serif;
     background-color: #FFBF69;
     border: 2px solid #FF9F1C;
+    border-radius: 10px;
     font-weight: 600;
     font-size: medium;
     padding: 8px 16px;

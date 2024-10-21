@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <title>My programs</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/client-programs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>My Programs</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Instructor</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="program : ${programs}">
-        <td th:text="${program.title}"></td>
-        <td th:text="${program.description}"></td>
-        <td th:text="${program.instructor.name}"></td>
-    </tr>
-    </tbody>
-</table>
+<nav>
+    <div id="logo">
+        <img src="/img/logo-fitnessapp.png" alt="logo"/>
+    </div>
+    <div id="menu">
+        <a th:href="@{/logout}">
+            <button class="menu-buttons">Logout</button>
+        </a>
+    </div>
+</nav>
+<div id="main">
+    <h1>My Programs</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Instructor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="program : ${programs}">
+            <td th:text="${program.title}"></td>
+            <td th:text="${program.description}"></td>
+            <td th:text="${program.instructor.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

@@ -28,15 +28,14 @@ public class FitnessProgramController {
         this.fitnessProgramService = fitnessProgramService;
     }
 
-    @GetMapping
-    public String getAllPrograms(@RequestParam(required = false) Long clientId, Model model) {
+    @GetMapping("/{clientId}")
+    public String getAllPrograms(@PathVariable Long clientId, Model model) {
         List<FitnessProgram> programs = fitnessProgramService.getAll();
         model.addAttribute("programs", programs);
-        if (clientId != null) {
-            model.addAttribute("clientId", clientId);
-            List<FitnessProgram> enrolledPrograms = clientService.getEnrolledPrograms(clientId);
-            model.addAttribute("enrolledPrograms", enrolledPrograms);
-        }
+        model.addAttribute("clientId", clientId);
+        List<FitnessProgram> enrolledPrograms = clientService.getEnrolledPrograms(clientId);
+        model.addAttribute("enrolledPrograms", enrolledPrograms);
+
         return "programs";
     }
 

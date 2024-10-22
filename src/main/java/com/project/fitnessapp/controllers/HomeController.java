@@ -43,7 +43,7 @@ public class HomeController {
                 if (user.getRole() == Role.INSTRUCTOR) {
                     return "redirect:/programs/instructor-programs/" + user.getId();
                 } else if (user.getRole() == Role.CLIENT) {
-                    return "redirect:/programs?clientId=" + user.getId();
+                    return "redirect:/programs/" + user.getId();
                 }
             }
         } catch (NoResultException | EmptyResultDataAccessException e) {
@@ -75,7 +75,7 @@ public class HomeController {
             return "redirect:/programs/instructor-programs/" + instructorId;
         } else if (newUser.getRole() == Role.CLIENT) {
             Long clientId = newUser.getId();
-            return "redirect:/programs?clientId=" + clientId;
+            return "redirect:/programs/" + clientId;
         }
 
         return "homepage";

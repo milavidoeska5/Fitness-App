@@ -104,13 +104,10 @@ public class FitnessProgramController {
         RestTemplate restTemplate = new RestTemplate();
 
         try {
-            // Directly fetch data from the provided URL without validation
             ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-            // Add the fetched data to the model
             model.addAttribute("data", response.getBody());
         } catch (Exception e) {
-            // Handle errors gracefully
             model.addAttribute("error", "Error fetching data: " + e.getMessage());
         }
 

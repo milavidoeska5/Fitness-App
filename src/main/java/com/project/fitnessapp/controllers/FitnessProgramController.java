@@ -90,7 +90,7 @@ public class FitnessProgramController {
             clientService.addClient(client);
         }
 
-        return "redirect:/programs?clientId=" + clientId;
+        return "redirect:/programs/" + clientId;
     }
 
     @GetMapping("/fetch-data")

@@ -30,35 +30,6 @@ public class HomeController {
         return "login";
     }
 
-    @PostMapping("/login")
-    public String authenticate(@RequestParam String email,
-                               @RequestParam String password,
-                               Model model) {
-        logger.info("User login attempt: email={}, password={}", email, password);
-
-        try {
-            AppUser user = appUserService.findByEmailAndPasswordUnsafe(email, password);
-
-            if (user != null && user.getPassword().equals(password)) {
-                if (user.getRole() == Role.INSTRUCTOR) {
-                    return "redirect:/programs/instructor-programs/" + user.getId();
-                } else if (user.getRole() == Role.CLIENT) {
-                    return "redirect:/programs?clientId=" + user.getId();
-                }
-            }
-        } catch (NoResultException | EmptyResultDataAccessException e) {
-            // Handle the case when the user or password is incorrect
-            if (appUserService.findByEmailUnsafe(email) == null) {
-                model.addAttribute("error", "Invalid email.");
-            } else {
-                model.addAttribute("error", "Invalid password.");
-            }
-        }
-
-        return "login"; // Return to login template with error message
-    }
-
-
     @GetMapping("/register")
     public String register() {
         return "register";

@@ -1,5 +1,6 @@
 package com.project.fitnessapp.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,8 +13,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Configuration
 public class SecurityConfig {
+
+    private final CustomAuthenticationSuccessHandler successHandler;
+
+    public SecurityConfig(CustomAuthenticationSuccessHandler successHandler) {
+        this.successHandler = successHandler;
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -21,6 +31,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF if not needed
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/", "/login", "/register").permitAll() // Public access
+                        .requestMatchers("/css/**", "/js/**", "/img/**").permitAll()
                         .requestMatchers("/programs/instructor-programs/**",
                                 "/programs/*/addProgram",
                                 "/programs/client-info/**").hasRole("INSTRUCTOR") // Instructor only
@@ -29,7 +40,7 @@ public class SecurityConfig {
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
-                        .defaultSuccessUrl("/", true)
+                        .successHandler(successHandler)
                         .permitAll()
                 )
                 .logout(logout -> logout
@@ -45,17 +56,34 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        UserDetails instructor = User.withUsername("instructor")
-                .password(passwordEncoder.encode("password"))
+        List<UserDetails> users = new ArrayList<>();
+
+        UserDetails instructor1 = User.withUsername("mv@gmail.com")
+                .password(passwordEncoder.encode("admin123"))
                 .roles("INSTRUCTOR")
                 .build();
 
-        UserDetails client = User.withUsername("client")
-                .password(passwordEncoder.encode("password"))
+        UserDetails instructor2 = User.withUsername("mt@gmail.com")
+                .password(passwordEncoder.encode("admin123"))
+                .roles("INSTRUCTOR")
+                .build();
+
+        UserDetails client1 = User.withUsername("klient1@gmail.com")
+                .password(passwordEncoder.encode("user123"))
                 .roles("CLIENT")
                 .build();
 
-        return new InMemoryUserDetailsManager(instructor, client);
+        UserDetails client2 = User.withUsername("klient2@gmail.com")
+                .password(passwordEncoder.encode("user123"))
+                .roles("CLIENT")
+                .build();
+
+        users.add(instructor1);
+        users.add(instructor2);
+        users.add(client1);
+        users.add(client2);
+
+        return new InMemoryUserDetailsManager(users);
     }
 
     @Bean

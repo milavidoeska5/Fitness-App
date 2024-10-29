@@ -34,4 +34,8 @@ public class AppUserService {
     public AppUser findByEmailUnsafe(String email) {
         return appUserRepositoryVulnerable.findByEmailUnsafe(email);
     }
+
+    public AppUser findByEmail(String email) {
+        return appUserRepository.findByEmail(email);
+    }
 }

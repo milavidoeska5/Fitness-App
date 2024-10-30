@@ -9,6 +9,8 @@ import com.project.fitnessapp.repositories.FitnessProgramRepository;
 import com.project.fitnessapp.repositories.InstructorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -22,12 +24,15 @@ public class DataLoader implements CommandLineRunner {
 
     @Autowired
     private ClientRepository clientRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public void run(String... args) throws Exception {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         // Create instructors
-        Instructor instructor1 = new Instructor("Mila Vidoeska","mv@gmail.com", "admin123");
-        Instructor instructor2 = new Instructor("Mihaela Trajkovska", "mt@gmail.com", "admin123");
+        Instructor instructor1 = new Instructor("Mila Vidoeska","mv@gmail.com", encoder.encode("admin123"));
+        Instructor instructor2 = new Instructor("Mihaela Trajkovska", "mt@gmail.com", encoder.encode("admin123"));
 
         // Save instructors
         instructorRepository.save(instructor1);
@@ -42,8 +47,8 @@ public class DataLoader implements CommandLineRunner {
         fitnessProgramRepository.save(program2);
 
         // Create clients and enroll them in programs
-        Client client1 = new Client("Klient 1", "klient1@gmail.com", "user123");
-        Client client2 = new Client("Klient 2", "klient2@gmail.com", "user123");
+        Client client1 = new Client("Klient 1", "klient1@gmail.com", encoder.encode("user123"));
+        Client client2 = new Client("Klient 2", "klient2@gmail.com", encoder.encode("user123"));
 
         client1.getEnrolledPrograms().add(program1);
         client2.getEnrolledPrograms().add(program2);

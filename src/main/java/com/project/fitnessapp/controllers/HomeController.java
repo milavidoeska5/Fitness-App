@@ -7,7 +7,7 @@ import jakarta.persistence.NoResultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,17 +36,19 @@ public class HomeController {
     }
 
     @PostMapping("/register")
-    public String register(@RequestParam String name, @RequestParam String email,
+    public String register(@RequestParam String name, @RequestParam String username,
                            @RequestParam String password, @RequestParam Role role, Model model) {
 
-        AppUser newUser = appUserService.register(name, email, password, role);
+        BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+        String encodedPassword= passwordEncoder.encode(password);
+        AppUser newUser = appUserService.register(name, username, encodedPassword, role);
 
-        if (newUser.getRole() == Role.INSTRUCTOR) {
+        if ( role == Role.INSTRUCTOR) {
             Long instructorId = newUser.getId();
             return "redirect:/programs/instructor-programs/" + instructorId;
-        } else if (newUser.getRole() == Role.CLIENT) {
+        } else if (role == Role.CLIENT) {
             Long clientId = newUser.getId();
-            return "redirect:/programs?clientId=" + clientId;
+            return "redirect:/programs/" + clientId;
         }
 
         return "homepage";

@@ -42,16 +42,10 @@ public class HomeController {
         BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
         String encodedPassword= passwordEncoder.encode(password);
         AppUser newUser = appUserService.register(name, username, encodedPassword, role);
+        Long id = newUser.getId();
+        model.addAttribute("user", newUser);
 
-        if ( role == Role.INSTRUCTOR) {
-            Long instructorId = newUser.getId();
-            return "redirect:/programs/instructor-programs/" + instructorId;
-        } else if (role == Role.CLIENT) {
-            Long clientId = newUser.getId();
-            return "redirect:/programs/" + clientId;
-        }
-
-        return "homepage";
+        return "login";
     }
 
     @GetMapping("/logout")

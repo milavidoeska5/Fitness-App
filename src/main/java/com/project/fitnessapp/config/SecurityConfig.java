@@ -1,31 +1,33 @@
 package com.project.fitnessapp.config;
 
+import com.project.fitnessapp.models.AppUser;
+import com.project.fitnessapp.repositories.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+
 
 @Configuration
 public class SecurityConfig {
-
     @Autowired
-    private final CustomAuthenticationSuccessHandler successHandler;
+    private final AppUserRepository appUserRepository;
 
-    public SecurityConfig(CustomAuthenticationSuccessHandler successHandler) {
-        this.successHandler = successHandler;
+    public SecurityConfig(AppUserRepository appUserRepository) {
+        this.appUserRepository = appUserRepository;
     }
 
     @Bean
@@ -43,7 +45,7 @@ public class SecurityConfig {
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
-                        .successHandler(successHandler)
+                        .successHandler(customAuthenticationSuccessHandler())
                         .permitAll()
                 )
                 .logout(logout -> logout
@@ -64,40 +66,40 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        List<UserDetails> users = new ArrayList<>();
+    public UserDetailsService userDetailsService() {
+        return username -> {
+            AppUser user = appUserRepository.findByEmail(username);
+            if (user == null) {
+                throw new UsernameNotFoundException("User not found");
+            }
 
-        UserDetails instructor1 = User.withUsername("mv@gmail.com")
-                .password(passwordEncoder.encode("admin123"))
-                .roles("INSTRUCTOR")
-                .build();
-
-        UserDetails instructor2 = User.withUsername("mt@gmail.com")
-                .password(passwordEncoder.encode("admin123"))
-                .roles("INSTRUCTOR")
-                .build();
-
-        UserDetails client1 = User.withUsername("klient1@gmail.com")
-                .password(passwordEncoder.encode("user123"))
-                .roles("CLIENT")
-                .build();
-
-        UserDetails client2 = User.withUsername("klient2@gmail.com")
-                .password(passwordEncoder.encode("user123"))
-                .roles("CLIENT")
-                .build();
-
-        users.add(instructor1);
-        users.add(instructor2);
-        users.add(client1);
-        users.add(client2);
-
-        return new InMemoryUserDetailsManager(users);
+            return new org.springframework.security.core.userdetails.User(
+                    user.getEmail(),
+                    user.getPassword(),
+                    Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().toString()))
+            );
+        };
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationSuccessHandler customAuthenticationSuccessHandler() {
+        return (request, response, authentication) -> {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            AppUser user = appUserRepository.findByEmail(userDetails.getUsername());
+
+            String redirectUrl;
+            if ("INSTRUCTOR".equals(user.getRole().toString())) {
+                redirectUrl = "/programs/instructor-programs/" + user.getId();
+            } else {
+                redirectUrl = "/programs/" + user.getId();
+            }
+            response.sendRedirect(redirectUrl);
+        };
     }
 
 }

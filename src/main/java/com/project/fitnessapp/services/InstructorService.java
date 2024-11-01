@@ -26,4 +26,14 @@ public class InstructorService {
     public Instructor findById(Long instructorId) {
         return instructorRepository.findById(instructorId).orElseThrow();
     }
+
+    public boolean isClientOfInstructor(Long instructorId, Long clientId) {
+        Instructor instructor = instructorRepository.findById(instructorId)
+                .orElseThrow(() -> new IllegalArgumentException("Instructor not found"));
+
+        return instructor.getFitnessPrograms().stream()
+                .anyMatch(program -> program.getClients().stream()
+                        .anyMatch(client -> client.getId().equals(clientId)));
+    }
+
 }

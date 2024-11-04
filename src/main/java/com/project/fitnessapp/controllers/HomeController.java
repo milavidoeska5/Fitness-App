@@ -39,10 +39,14 @@ public class HomeController {
     public String register(@RequestParam String name, @RequestParam String username,
                            @RequestParam String password, @RequestParam Role role, Model model) {
 
+        if (!appUserService.isValidPassword(password)) {
+            model.addAttribute("error", "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.");
+            return "register";
+        }
+
         BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
         String encodedPassword= passwordEncoder.encode(password);
         AppUser newUser = appUserService.register(name, username, encodedPassword, role);
-        Long id = newUser.getId();
         model.addAttribute("user", newUser);
 
         return "login";

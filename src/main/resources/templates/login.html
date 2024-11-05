@@ -28,9 +28,11 @@
     </div>
 </form>
 
-<div th:if="${error}" style="color: red;">
-    <p th:text="${error}"></p>
+<div th:if="${param.error}" style="color: red;">
+    <p>Invalid username or password.</p>
 </div>
-
+<div th:if="${param.locked}" style="color: red;">
+    Your account is locked due to too many failed login attempts. Please try again later.
+</div>
 </body>
 </html>

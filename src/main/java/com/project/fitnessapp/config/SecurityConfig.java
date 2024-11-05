@@ -2,11 +2,13 @@ package com.project.fitnessapp.config;
 
 import com.project.fitnessapp.models.AppUser;
 import com.project.fitnessapp.repositories.AppUserRepository;
+import com.project.fitnessapp.services.LoginAttemptService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +17,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
@@ -26,18 +29,22 @@ public class SecurityConfig {
     @Autowired
     private final AppUserRepository appUserRepository;
 
-    public SecurityConfig(AppUserRepository appUserRepository) {
+    @Autowired
+    private final LoginAttemptService loginAttemptService;
+
+    public SecurityConfig(AppUserRepository appUserRepository, LoginAttemptService loginAttemptService) {
         this.appUserRepository = appUserRepository;
+        this.loginAttemptService = loginAttemptService;
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(AbstractHttpConfigurer::disable) // Disable CSRF if not needed
+                .csrf(csrf -> csrf.ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**"))) // Disable CSRF if not needed
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/login", "/register", "/h2-console/**").permitAll() // Public access
+                        .requestMatchers("/", "/login/**", "/register").permitAll() // Public access
                         .requestMatchers("/css/**", "/js/**", "/img/**").permitAll()
-                        .requestMatchers("/programs/instructor-programs/**",
+                        .requestMatchers("/h2-console/**","/programs/instructor-programs/**",
                                 "/programs/*/addProgram",
                                 "/programs/client-info/**").hasRole("INSTRUCTOR") // Instructor only
                         .requestMatchers("/programs/client-programs/**", "/programs/**").hasRole("CLIENT") // Client only
@@ -45,6 +52,8 @@ public class SecurityConfig {
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
+                        .failureUrl("/login?error")
+                        .failureHandler(customAuthenticationFailureHandler())
                         .successHandler(customAuthenticationSuccessHandler())
                         .permitAll()
                 )
@@ -102,4 +111,19 @@ public class SecurityConfig {
         };
     }
 
+    @Bean
+    public AuthenticationFailureHandler customAuthenticationFailureHandler() {
+        return (HttpServletRequest request, HttpServletResponse response,
+                org.springframework.security.core.AuthenticationException exception) -> {
+            String username = request.getParameter("email");
+            loginAttemptService.recordFailedAttempt(username);
+            loginAttemptService.checkAndLockUser(username);
+
+            if (loginAttemptService.isUserLockedOut(username)) {
+                response.sendRedirect("/login?locked=true");
+            } else {
+                response.sendRedirect("/login?error=true");
+            }
+        };
+    }
 }

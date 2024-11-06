@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HomeController {
     @Autowired
     private AppUserService appUserService;
-    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     @GetMapping("/")
     public String home() {

@@ -20,6 +20,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Collections;
 
@@ -77,6 +79,13 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         return username -> {
+            HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+            String sessionId = request.getSession().getId();
+
+            if (loginAttemptService.isSessionLockedOut(sessionId)) {
+                throw new UsernameNotFoundException("User is locked out due to too many failed attempts.");
+            }
+
             AppUser user = appUserRepository.findByEmail(username);
             if (user == null) {
                 throw new UsernameNotFoundException("User not found");
@@ -115,13 +124,14 @@ public class SecurityConfig {
     public AuthenticationFailureHandler customAuthenticationFailureHandler() {
         return (HttpServletRequest request, HttpServletResponse response,
                 org.springframework.security.core.AuthenticationException exception) -> {
-            String username = request.getParameter("email");
-            loginAttemptService.recordFailedAttempt(username);
-            loginAttemptService.checkAndLockUser(username);
 
-            if (loginAttemptService.isUserLockedOut(username)) {
+            String sessionId = request.getSession().getId();
+
+            if (loginAttemptService.isSessionLockedOut(sessionId)) {
                 response.sendRedirect("/login?locked=true");
             } else {
+                loginAttemptService.recordFailedAttempt(request);
+                loginAttemptService.checkAndLockSession(request);
                 response.sendRedirect("/login?error=true");
             }
         };

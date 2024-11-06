@@ -24,7 +24,7 @@
         <input type="password" id="password" name="password" required>
     </div>
     <div id="form-button">
-        <button type="submit">Login</button>
+        <button type="submit" th:disabled="${param.locked}">Login</button>
     </div>
 </form>
 
@@ -32,7 +32,7 @@
     <p>Invalid username or password.</p>
 </div>
 <div th:if="${param.locked}" style="color: red;">
-    Your account is locked due to too many failed login attempts. Please try again later.
+    <p>Your account is locked due to too many failed login attempts. Please try again later.</p>
 </div>
 </body>
 </html>

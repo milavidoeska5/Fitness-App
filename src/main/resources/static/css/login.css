@@ -35,6 +35,17 @@ form {
     color: #FFFFFF;
 }
 
+#form-button button:disabled:hover{
+    color: #2EC4B6;
+    background-color: #FFFFFF;
+    border: 2px solid #2EC4B6;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
 .form-inputs{
     display: flex;
     flex-direction: column;

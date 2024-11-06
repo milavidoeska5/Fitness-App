@@ -1,5 +1,6 @@
 package com.project.fitnessapp.services;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -13,34 +14,43 @@ public class LoginAttemptService {
     private final Map<String, Integer> attemptsCache = new HashMap<>();
     private final Map<String, Long> lockoutCache = new HashMap<>();
 
-    public void recordFailedAttempt(String username) {
-        if (isUserLockedOut(username)) {
+    public void recordFailedAttempt(HttpServletRequest request) {
+        String sessionId = getSessionId(request);
+
+        if (isSessionLockedOut(sessionId)) {
             return;
         }
-        attemptsCache.put(username, attemptsCache.getOrDefault(username, 0) + 1);
+
+        attemptsCache.put(sessionId, attemptsCache.getOrDefault(sessionId, 0) + 1);
     }
 
-    public boolean isUserLockedOut(String username) {
-        if (lockoutCache.containsKey(username)) {
-            long lockoutTime = lockoutCache.get(username);
+    public boolean isSessionLockedOut(String sessionId) {
+        Long lockoutTime = lockoutCache.get(sessionId);
+        if (lockoutTime != null) {
             if (System.currentTimeMillis() - lockoutTime < LOCK_TIME_DURATION) {
                 return true;
             } else {
-                unlockUser(username);
+                unlockSession(sessionId);
+                return false;
             }
         }
         return false;
     }
 
-    public void unlockUser(String username) {
-        attemptsCache.remove(username);
-        lockoutCache.remove(username);
+    public void unlockSession(String sessionId) {
+        attemptsCache.remove(sessionId);
+        lockoutCache.remove(sessionId);
     }
 
-    public void checkAndLockUser(String username) {
-        if (attemptsCache.getOrDefault(username, 0) >= MAX_ATTEMPT) {
-            lockoutCache.put(username, System.currentTimeMillis());
-            attemptsCache.remove(username);
+    public void checkAndLockSession(HttpServletRequest request) {
+        String sessionId = getSessionId(request);
+        if (attemptsCache.getOrDefault(sessionId, 0) >= MAX_ATTEMPT) {
+            lockoutCache.put(sessionId, System.currentTimeMillis());
+            attemptsCache.remove(sessionId);
         }
+    }
+
+    private String getSessionId(HttpServletRequest request) {
+        return request.getSession().getId();
     }
 }

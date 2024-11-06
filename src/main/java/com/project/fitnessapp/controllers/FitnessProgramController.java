@@ -17,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URL;
 import java.util.List;
 
 @Controller
@@ -99,6 +100,8 @@ public class FitnessProgramController {
 
     @PostMapping("/enroll")
     public String enrollInProgram(@RequestParam Long clientId, @RequestParam Long programId) {
+        verifyClientAccess(clientId);
+
         Client client = clientService.getClient(clientId);
         FitnessProgram program = fitnessProgramService.getById(programId);
         if(!clientService.getEnrolledPrograms(clientId).contains(program)){
@@ -120,8 +123,17 @@ public class FitnessProgramController {
         RestTemplate restTemplate = new RestTemplate();
 
         try {
-            ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+            if (!isValidUrl(url)) {
+                model.addAttribute("error", "Invalid URL.");
+                return "fetch-data";
+            }
 
+            if (!isAllowedDomain(url)) {
+                model.addAttribute("error", "URL is not allowed.");
+                return "fetch-data";
+            }
+
+            ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
             model.addAttribute("data", response.getBody());
         } catch (Exception e) {
             model.addAttribute("error", "Error fetching data: " + e.getMessage());
@@ -157,6 +169,26 @@ public class FitnessProgramController {
             throw new AccessDeniedException("Access is denied.");
         }
 
+    }
+
+    private boolean isValidUrl(String url) {
+        try {
+            new URL(url).toURI();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean isAllowedDomain(String url) {
+        List<String> allowedDomains = List.of("dummyjson.com");
+        try {
+            URL parsedUrl = new URL(url);
+            String host = parsedUrl.getHost();
+            return allowedDomains.contains(host);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 

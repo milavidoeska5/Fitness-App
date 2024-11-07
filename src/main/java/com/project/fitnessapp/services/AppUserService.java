@@ -33,7 +33,7 @@ public class AppUserService {
     public boolean isValidPassword(String password) {
         int minLength = 8;
 
-        String passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{" + minLength + ",}$";
+        String passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{" + minLength + ",}$";
 
         return password != null && password.matches(passwordPattern);
     }

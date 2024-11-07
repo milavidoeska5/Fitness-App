@@ -43,15 +43,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**"))) // Disable CSRF if not needed
+                .csrf(csrf -> csrf.ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**")))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/login/**", "/register").permitAll() // Public access
+                        .requestMatchers("/", "/login/**", "/register").permitAll()
                         .requestMatchers("/css/**", "/js/**", "/img/**").permitAll()
                         .requestMatchers("/h2-console/**","/programs/instructor-programs/**",
                                 "/programs/*/addProgram",
-                                "/programs/client-info/**").hasRole("INSTRUCTOR") // Instructor only
-                        .requestMatchers("/programs/client-programs/**", "/programs/**").hasRole("CLIENT") // Client only
-                        .anyRequest().authenticated() // All other requests require authentication
+                                "/programs/client-info/**").hasRole("INSTRUCTOR")
+                        .requestMatchers("/programs/client-programs/**", "/programs/**").hasRole("CLIENT")
+                        .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/login")

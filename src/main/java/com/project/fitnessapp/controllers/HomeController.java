@@ -39,7 +39,9 @@ public class HomeController {
                            @RequestParam String password, @RequestParam Role role, Model model) {
 
         if (!appUserService.isValidPassword(password)) {
-            model.addAttribute("error", "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.");
+            model.addAttribute("error",
+                    "Password must be at least 8 characters long and include an uppercase letter," +
+                            " a lowercase letter, a number, and a special character.");
             return "register";
         }
 

@@ -1,0 +1,908 @@
+2024-10-28 08:10:02 - Starting FitnessAppApplication using Java 22.0.2 with PID 10136 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 08:10:02 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 08:10:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 08:10:03 - Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-10-28 08:10:03 - Tomcat initialized with port 8080 (http)
+2024-10-28 08:10:03 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 08:10:03 - Starting service [Tomcat]
+2024-10-28 08:10:03 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 08:10:03 - Initializing Spring embedded WebApplicationContext
+2024-10-28 08:10:03 - Root WebApplicationContext: initialization completed in 1274 ms
+2024-10-28 08:10:03 - HikariPool-1 - Starting...
+2024-10-28 08:10:04 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 08:10:04 - HikariPool-1 - Start completed.
+2024-10-28 08:10:04 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 08:10:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 08:10:04 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 08:10:04 - HHH000026: Second-level cache disabled
+2024-10-28 08:10:04 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 08:10:05 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 08:10:05 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 08:10:05 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 08:10:05 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 08:10:06 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 08:10:06 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 08:10:06 - Started FitnessAppApplication in 4.06 seconds (process running for 7.618)
+2024-10-28 08:10:07 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 08:10:07 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 08:10:07 - Completed initialization in 3 ms
+2024-10-28 08:29:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 08:29:36 - HikariPool-1 - Shutdown initiated...
+2024-10-28 08:29:36 - HikariPool-1 - Shutdown completed.
+2024-10-28 09:03:23 - Starting FitnessAppApplication using Java 22.0.2 with PID 12376 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 09:03:23 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 09:03:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 09:03:23 - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2024-10-28 09:03:24 - Tomcat initialized with port 8080 (http)
+2024-10-28 09:03:24 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 09:03:24 - Starting service [Tomcat]
+2024-10-28 09:03:24 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 09:03:24 - Initializing Spring embedded WebApplicationContext
+2024-10-28 09:03:24 - Root WebApplicationContext: initialization completed in 991 ms
+2024-10-28 09:03:24 - HikariPool-1 - Starting...
+2024-10-28 09:03:24 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 09:03:24 - HikariPool-1 - Start completed.
+2024-10-28 09:03:24 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 09:03:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 09:03:24 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 09:03:24 - HHH000026: Second-level cache disabled
+2024-10-28 09:03:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 09:03:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 09:03:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 09:03:25 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 09:03:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 09:03:26 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 09:03:26 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 09:03:26 - Started FitnessAppApplication in 3.496 seconds (process running for 4.175)
+2024-10-28 09:03:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 09:03:34 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 09:03:34 - Completed initialization in 1 ms
+2024-10-28 09:03:42 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ArithmeticException: / by zero] with root cause
+java.lang.ArithmeticException: / by zero
+	at com.project.fitnessapp.controllers.TestController.causeError(TestController.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-10-28 09:03:42 - [THYMELEAF][http-nio-8080-exec-6] Exception processing template "error": Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-10-28 09:03:42 - Servlet.service() for servlet [dispatcherServlet] threw exception
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-10-28 09:03:42 - Exception Processing [ErrorPage[errorCode=0, location=/error]]
+jakarta.servlet.ServletException: Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	... 36 common frames omitted
+2024-10-28 09:24:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 09:24:54 - HikariPool-1 - Shutdown initiated...
+2024-10-28 09:24:54 - HikariPool-1 - Shutdown completed.
+2024-10-28 10:40:48 - Starting FitnessAppApplication using Java 22.0.2 with PID 16764 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 10:40:48 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 10:40:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 10:40:48 - Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2024-10-28 10:40:49 - Tomcat initialized with port 8080 (http)
+2024-10-28 10:40:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 10:40:49 - Starting service [Tomcat]
+2024-10-28 10:40:49 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 10:40:49 - Initializing Spring embedded WebApplicationContext
+2024-10-28 10:40:49 - Root WebApplicationContext: initialization completed in 1109 ms
+2024-10-28 10:40:49 - HikariPool-1 - Starting...
+2024-10-28 10:40:49 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 10:40:49 - HikariPool-1 - Start completed.
+2024-10-28 10:40:49 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 10:40:49 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 10:40:49 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 10:40:49 - HHH000026: Second-level cache disabled
+2024-10-28 10:40:49 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 10:40:50 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 10:40:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 10:40:50 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 10:40:51 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 10:40:51 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 10:40:51 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 10:40:51 - Started FitnessAppApplication in 3.762 seconds (process running for 4.421)
+2024-10-28 10:40:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 10:40:51 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 10:40:51 - Completed initialization in 0 ms
+2024-10-28 10:41:08 - User login attempt: email=mv@gmail.com, password=wrongpass
+2024-10-28 11:04:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 11:04:48 - HikariPool-1 - Shutdown initiated...
+2024-10-28 11:04:48 - HikariPool-1 - Shutdown completed.
+2024-10-28 11:35:58 - Starting FitnessAppApplication using Java 22.0.2 with PID 12384 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 11:35:58 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 11:35:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 11:35:59 - Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
+2024-10-28 11:35:59 - Tomcat initialized with port 8080 (http)
+2024-10-28 11:35:59 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 11:35:59 - Starting service [Tomcat]
+2024-10-28 11:35:59 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 11:35:59 - Initializing Spring embedded WebApplicationContext
+2024-10-28 11:35:59 - Root WebApplicationContext: initialization completed in 990 ms
+2024-10-28 11:35:59 - HikariPool-1 - Starting...
+2024-10-28 11:35:59 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 11:35:59 - HikariPool-1 - Start completed.
+2024-10-28 11:35:59 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 11:36:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 11:36:00 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 11:36:00 - HHH000026: Second-level cache disabled
+2024-10-28 11:36:00 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 11:36:01 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 11:36:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 11:36:01 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 11:36:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 11:36:01 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 11:36:01 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 11:36:01 - Started FitnessAppApplication in 3.385 seconds (process running for 4.086)
+2024-10-28 11:36:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 11:36:10 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 11:36:10 - Completed initialization in 7 ms
+2024-10-28 11:36:10 - User login attempt: email=mv@gmail.com, password=wrongpass
+2024-10-28 11:36:14 - User login attempt: email=mv@gmail.com, password=wrongpass
+2024-10-28 11:36:19 - User login attempt: email=mv@gmail.com, password=klsdmlf
+2024-10-28 11:36:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 11:36:38 - HikariPool-1 - Shutdown initiated...
+2024-10-28 11:36:38 - HikariPool-1 - Shutdown completed.
+2024-10-28 12:17:38 - Starting FitnessAppApplication using Java 22.0.2 with PID 15400 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 12:17:38 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 12:17:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 12:17:38 - Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-10-28 12:17:39 - Tomcat initialized with port 8080 (http)
+2024-10-28 12:17:39 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 12:17:39 - Starting service [Tomcat]
+2024-10-28 12:17:39 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 12:17:39 - Initializing Spring embedded WebApplicationContext
+2024-10-28 12:17:39 - Root WebApplicationContext: initialization completed in 1037 ms
+2024-10-28 12:17:39 - HikariPool-1 - Starting...
+2024-10-28 12:17:39 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 12:17:39 - HikariPool-1 - Start completed.
+2024-10-28 12:17:39 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 12:17:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 12:17:39 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 12:17:39 - HHH000026: Second-level cache disabled
+2024-10-28 12:17:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 12:17:40 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 12:17:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 12:17:40 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 12:17:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 12:17:41 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 12:17:41 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 12:17:41 - Started FitnessAppApplication in 3.518 seconds (process running for 4.308)
+2024-10-28 12:17:43 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 12:17:43 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 12:17:43 - Completed initialization in 0 ms
+2024-10-28 12:17:43 - User login attempt: email=mv@gmail.com, password=klsdmlf
+2024-10-28 12:24:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 12:24:08 - HikariPool-1 - Shutdown initiated...
+2024-10-28 12:24:08 - HikariPool-1 - Shutdown completed.
+2024-10-28 12:24:33 - Starting FitnessAppApplication using Java 22.0.2 with PID 11884 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-28 12:24:33 - No active profile set, falling back to 1 default profile: "default"
+2024-10-28 12:24:33 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28 12:24:33 - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2024-10-28 12:24:34 - Tomcat initialized with port 8080 (http)
+2024-10-28 12:24:34 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-28 12:24:34 - Starting service [Tomcat]
+2024-10-28 12:24:34 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-28 12:24:34 - Initializing Spring embedded WebApplicationContext
+2024-10-28 12:24:34 - Root WebApplicationContext: initialization completed in 910 ms
+2024-10-28 12:24:34 - HikariPool-1 - Starting...
+2024-10-28 12:24:34 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-28 12:24:34 - HikariPool-1 - Start completed.
+2024-10-28 12:24:34 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-28 12:24:34 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28 12:24:34 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-28 12:24:34 - HHH000026: Second-level cache disabled
+2024-10-28 12:24:34 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28 12:24:35 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28 12:24:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 12:24:35 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-28 12:24:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28 12:24:36 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-28 12:24:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-28 12:24:36 - Started FitnessAppApplication in 3.22 seconds (process running for 3.73)
+2024-10-28 12:24:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28 12:24:36 - Initializing Servlet 'dispatcherServlet'
+2024-10-28 12:24:36 - Completed initialization in 1 ms
+2024-10-28 12:29:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28 12:29:03 - HikariPool-1 - Shutdown initiated...
+2024-10-28 12:29:03 - HikariPool-1 - Shutdown completed.
+2024-10-29 13:40:49 - Starting FitnessAppApplication using Java 22.0.2 with PID 9512 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-29 13:40:49 - No active profile set, falling back to 1 default profile: "default"
+2024-10-29 13:40:50 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-29 13:40:50 - Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2024-10-29 13:40:50 - Tomcat initialized with port 8080 (http)
+2024-10-29 13:40:50 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-29 13:40:50 - Starting service [Tomcat]
+2024-10-29 13:40:50 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-29 13:40:50 - Initializing Spring embedded WebApplicationContext
+2024-10-29 13:40:50 - Root WebApplicationContext: initialization completed in 1013 ms
+2024-10-29 13:40:50 - HikariPool-1 - Starting...
+2024-10-29 13:40:51 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-29 13:40:51 - HikariPool-1 - Start completed.
+2024-10-29 13:40:51 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-29 13:40:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-29 13:40:51 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-29 13:40:51 - HHH000026: Second-level cache disabled
+2024-10-29 13:40:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-29 13:40:52 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-29 13:40:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-29 13:40:52 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-29 13:40:52 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-29 13:40:52 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-29 13:40:52 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-29 13:40:52 - Started FitnessAppApplication in 3.463 seconds (process running for 3.953)
+2024-10-29 13:40:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-29 13:40:53 - Initializing Servlet 'dispatcherServlet'
+2024-10-29 13:40:53 - Completed initialization in 1 ms
+2024-10-29 13:41:01 - User login attempt: email=mv@gmail.com, password=admin123
+2024-10-29 13:41:10 - User login attempt: email=klient1@gmail.com, password=user123
+2024-10-29 13:41:12 - [THYMELEAF][http-nio-8080-exec-8] Exception processing template "error": Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-10-29 13:41:12 - Servlet.service() for servlet [dispatcherServlet] threw exception
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-10-29 13:41:12 - Exception Processing [ErrorPage[errorCode=0, location=/error]]
+jakarta.servlet.ServletException: Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [error], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	... 35 common frames omitted
+2024-10-29 13:41:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-29 13:41:41 - HikariPool-1 - Shutdown initiated...
+2024-10-29 13:41:41 - HikariPool-1 - Shutdown completed.
+2024-10-29 13:42:27 - Starting FitnessAppApplication using Java 22.0.2 with PID 6628 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-10-29 13:42:27 - No active profile set, falling back to 1 default profile: "default"
+2024-10-29 13:42:27 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-29 13:42:27 - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2024-10-29 13:42:28 - Tomcat initialized with port 8080 (http)
+2024-10-29 13:42:28 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-29 13:42:28 - Starting service [Tomcat]
+2024-10-29 13:42:28 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-10-29 13:42:28 - Initializing Spring embedded WebApplicationContext
+2024-10-29 13:42:28 - Root WebApplicationContext: initialization completed in 964 ms
+2024-10-29 13:42:28 - HikariPool-1 - Starting...
+2024-10-29 13:42:28 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-29 13:42:28 - HikariPool-1 - Start completed.
+2024-10-29 13:42:28 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-29 13:42:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-29 13:42:28 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-10-29 13:42:28 - HHH000026: Second-level cache disabled
+2024-10-29 13:42:28 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-29 13:42:29 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-29 13:42:29 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-29 13:42:29 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-29 13:42:29 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-29 13:42:29 - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-29 13:42:29 - Tomcat started on port 8080 (http) with context path '/'
+2024-10-29 13:42:29 - Started FitnessAppApplication in 3.179 seconds (process running for 3.634)
+2024-10-29 13:42:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-29 13:42:36 - Initializing Servlet 'dispatcherServlet'
+2024-10-29 13:42:36 - Completed initialization in 2 ms
+2024-10-29 13:42:45 - User login attempt: email=klient1@gmail.com, password=user123
+2024-10-29 13:43:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-29 13:43:06 - HikariPool-1 - Shutdown initiated...
+2024-10-29 13:43:06 - HikariPool-1 - Shutdown completed.
+2024-11-11 21:47:51 - Starting FitnessAppApplication using Java 22.0.2 with PID 8648 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 21:47:51 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 21:47:52 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 21:47:52 - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2024-11-11 21:47:52 - Tomcat initialized with port 8080 (http)
+2024-11-11 21:47:52 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-11 21:47:52 - Starting service [Tomcat]
+2024-11-11 21:47:52 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-11 21:47:52 - Initializing Spring embedded WebApplicationContext
+2024-11-11 21:47:52 - Root WebApplicationContext: initialization completed in 1122 ms
+2024-11-11 21:47:52 - HikariPool-1 - Starting...
+2024-11-11 21:47:53 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 21:47:53 - HikariPool-1 - Start completed.
+2024-11-11 21:47:53 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 21:47:53 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 21:47:53 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 21:47:53 - HHH000026: Second-level cache disabled
+2024-11-11 21:47:53 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 21:47:54 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 21:47:54 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 21:47:54 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 21:47:54 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 21:47:55 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-11 21:47:55 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-11 21:47:55 - Started FitnessAppApplication in 3.852 seconds (process running for 5.17)
+2024-11-11 21:54:02 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 21:54:02 - HikariPool-1 - Shutdown initiated...
+2024-11-11 21:54:02 - HikariPool-1 - Shutdown completed.
+2024-11-11 21:54:14 - Starting FitnessAppApplication using Java 22.0.2 with PID 8592 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 21:54:14 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 21:54:14 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 21:54:14 - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2024-11-11 21:54:14 - Tomcat initialized with port 8080 (http)
+2024-11-11 21:54:14 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-11 21:54:14 - Starting service [Tomcat]
+2024-11-11 21:54:14 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-11 21:54:15 - Initializing Spring embedded WebApplicationContext
+2024-11-11 21:54:15 - Root WebApplicationContext: initialization completed in 985 ms
+2024-11-11 21:54:15 - HikariPool-1 - Starting...
+2024-11-11 21:54:15 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 21:54:15 - HikariPool-1 - Start completed.
+2024-11-11 21:54:15 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 21:54:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 21:54:15 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 21:54:15 - HHH000026: Second-level cache disabled
+2024-11-11 21:54:15 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 21:54:16 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 21:54:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 21:54:16 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 21:54:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 21:54:16 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-11 21:54:16 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-11 21:54:16 - Started FitnessAppApplication in 3.211 seconds (process running for 7.876)
+2024-11-11 21:58:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-11 21:58:39 - Initializing Servlet 'dispatcherServlet'
+2024-11-11 21:58:39 - Completed initialization in 0 ms
+2024-11-11 22:06:19 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s428ms893µs800ns).
+2024-11-11 22:15:42 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:15:42 - HikariPool-1 - Shutdown initiated...
+2024-11-11 22:15:43 - HikariPool-1 - Shutdown completed.
+2024-11-11 22:15:48 - Starting FitnessAppApplication using Java 22.0.2 with PID 9992 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 22:15:48 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 22:15:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 22:15:49 - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2024-11-11 22:15:50 - Tomcat initialized with port 8080 (http)
+2024-11-11 22:15:50 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-11 22:15:50 - Starting service [Tomcat]
+2024-11-11 22:15:50 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-11 22:15:50 - Initializing Spring embedded WebApplicationContext
+2024-11-11 22:15:50 - Root WebApplicationContext: initialization completed in 1710 ms
+2024-11-11 22:15:50 - HikariPool-1 - Starting...
+2024-11-11 22:15:50 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 22:15:50 - HikariPool-1 - Start completed.
+2024-11-11 22:15:50 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 22:15:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 22:15:51 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 22:15:51 - HHH000026: Second-level cache disabled
+2024-11-11 22:15:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 22:15:52 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 22:15:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:15:53 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 22:15:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 22:15:53 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-11 22:15:53 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-11 22:15:53 - Started FitnessAppApplication in 5.693 seconds (process running for 6.852)
+2024-11-11 22:45:55 - Starting FitnessAppApplicationTests using Java 22.0.2 with PID 7508 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 22:45:55 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 22:45:56 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 22:45:56 - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2024-11-11 22:45:57 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 22:45:57 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 22:45:57 - HHH000026: Second-level cache disabled
+2024-11-11 22:45:57 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 22:45:57 - HikariPool-1 - Starting...
+2024-11-11 22:45:57 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 22:45:57 - HikariPool-1 - Start completed.
+2024-11-11 22:45:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 22:45:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:45:59 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 22:45:59 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 22:46:00 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 22:46:00 - Started FitnessAppApplicationTests in 5.124 seconds (process running for 6.433)
+2024-11-11 22:46:01 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:46:01 - HikariPool-1 - Shutdown initiated...
+2024-11-11 22:46:01 - HikariPool-1 - Shutdown completed.
+2024-11-11 22:49:25 - Starting FitnessAppApplicationTests using Java 22.0.2 with PID 1668 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 22:49:25 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 22:49:26 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 22:49:26 - Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2024-11-11 22:49:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 22:49:26 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 22:49:26 - HHH000026: Second-level cache disabled
+2024-11-11 22:49:27 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 22:49:27 - HikariPool-1 - Starting...
+2024-11-11 22:49:27 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 22:49:27 - HikariPool-1 - Start completed.
+2024-11-11 22:49:28 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 22:49:28 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:49:28 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 22:49:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 22:49:29 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 22:49:29 - Started FitnessAppApplicationTests in 4.692 seconds (process running for 5.653)
+2024-11-11 22:49:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:49:30 - HikariPool-1 - Shutdown initiated...
+2024-11-11 22:49:30 - HikariPool-1 - Shutdown completed.
+2024-11-11 22:53:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:53:33 - HikariPool-1 - Shutdown initiated...
+2024-11-11 22:53:33 - HikariPool-1 - Shutdown completed.
+2024-11-11 22:53:37 - Starting FitnessAppApplication using Java 22.0.2 with PID 15680 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 22:53:37 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 22:53:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 22:53:38 - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2024-11-11 22:53:38 - Tomcat initialized with port 8080 (http)
+2024-11-11 22:53:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-11 22:53:38 - Starting service [Tomcat]
+2024-11-11 22:53:38 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-11 22:53:38 - Initializing Spring embedded WebApplicationContext
+2024-11-11 22:53:38 - Root WebApplicationContext: initialization completed in 877 ms
+2024-11-11 22:53:38 - HikariPool-1 - Starting...
+2024-11-11 22:53:38 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 22:53:38 - HikariPool-1 - Start completed.
+2024-11-11 22:53:38 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 22:53:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 22:53:38 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 22:53:39 - HHH000026: Second-level cache disabled
+2024-11-11 22:53:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 22:53:40 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 22:53:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:53:40 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 22:53:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 22:53:40 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-11 22:53:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-11 22:53:40 - Started FitnessAppApplication in 3.588 seconds (process running for 4.587)
+2024-11-11 22:54:44 - Starting FitnessAppApplicationTests using Java 22.0.2 with PID 18084 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 22:54:44 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 22:54:44 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 22:54:44 - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-11-11 22:54:45 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 22:54:45 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 22:54:45 - HHH000026: Second-level cache disabled
+2024-11-11 22:54:45 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 22:54:45 - HikariPool-1 - Starting...
+2024-11-11 22:54:46 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 22:54:46 - HikariPool-1 - Start completed.
+2024-11-11 22:54:46 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 22:54:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:54:47 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 22:54:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 22:54:48 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 22:54:48 - Started FitnessAppApplicationTests in 4.439 seconds (process running for 5.617)
+2024-11-11 22:54:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 22:54:48 - HikariPool-1 - Shutdown initiated...
+2024-11-11 22:54:48 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:02:12 - Starting FitnessAppApplicationTests using Java 17.0.11 with PID 10964 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:02:12 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:02:13 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:02:13 - Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:02:13 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:02:13 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:02:13 - HHH000026: Second-level cache disabled
+2024-11-11 23:02:14 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:02:14 - HikariPool-1 - Starting...
+2024-11-11 23:02:14 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:02:14 - HikariPool-1 - Start completed.
+2024-11-11 23:02:15 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:02:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:02:15 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:02:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:02:16 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:02:16 - Started FitnessAppApplicationTests in 4.37 seconds (process running for 5.727)
+2024-11-11 23:02:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:02:17 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:02:17 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:08:34 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:08:34 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:08:34 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:10:31 - Starting FitnessAppApplicationTests using Java 17.0.11 with PID 10376 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:10:31 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:10:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:10:32 - Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:10:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:10:33 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:10:33 - HHH000026: Second-level cache disabled
+2024-11-11 23:10:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:10:33 - HikariPool-1 - Starting...
+2024-11-11 23:10:33 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:10:33 - HikariPool-1 - Start completed.
+2024-11-11 23:10:35 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:10:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:10:35 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:10:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:10:36 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:10:36 - Started FitnessAppApplicationTests in 5.213 seconds (process running for 6.455)
+2024-11-11 23:10:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:10:37 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:10:37 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:13:59 - Starting FitnessAppApplicationTests using Java 17.0.11 with PID 14384 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:13:59 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:14:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:14:00 - Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:14:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:14:01 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:14:01 - HHH000026: Second-level cache disabled
+2024-11-11 23:14:02 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:14:02 - HikariPool-1 - Starting...
+2024-11-11 23:14:02 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:14:02 - HikariPool-1 - Start completed.
+2024-11-11 23:14:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:14:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:14:04 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:14:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:14:05 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:14:06 - Started FitnessAppApplicationTests in 7.128 seconds (process running for 9.119)
+2024-11-11 23:14:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:14:07 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:14:07 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:15:09 - Starting FitnessAppApplication using Java 22.0.2 with PID 15700 (C:\Users\milic\IdeaProjects\Fitness-App\target\classes started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:15:09 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:15:10 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:15:10 - Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:15:10 - Tomcat initialized with port 8080 (http)
+2024-11-11 23:15:10 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-11 23:15:10 - Starting service [Tomcat]
+2024-11-11 23:15:10 - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-11 23:15:10 - Initializing Spring embedded WebApplicationContext
+2024-11-11 23:15:10 - Root WebApplicationContext: initialization completed in 1651 ms
+2024-11-11 23:15:10 - HikariPool-1 - Starting...
+2024-11-11 23:15:11 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:15:11 - HikariPool-1 - Start completed.
+2024-11-11 23:15:11 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:15:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:15:11 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:15:11 - HHH000026: Second-level cache disabled
+2024-11-11 23:15:11 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:15:12 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:15:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:15:13 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:15:13 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:15:13 - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-11 23:15:13 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-11 23:15:13 - Started FitnessAppApplication in 5.51 seconds (process running for 6.224)
+2024-11-11 23:18:24 - Starting FitnessAppApplicationTests using Java 17.0.11 with PID 11652 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:18:24 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:18:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:18:24 - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:18:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:18:25 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:18:25 - HHH000026: Second-level cache disabled
+2024-11-11 23:18:26 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:18:26 - HikariPool-1 - Starting...
+2024-11-11 23:18:26 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:18:26 - HikariPool-1 - Start completed.
+2024-11-11 23:18:27 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:18:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:18:28 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:18:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:18:28 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:18:28 - Started FitnessAppApplicationTests in 5.15 seconds (process running for 6.593)
+2024-11-11 23:18:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:18:29 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:18:29 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:28:06 - Starting FitnessAppApplicationTests using Java 17.0.11 with PID 17436 (started by milic in C:\Users\milic\IdeaProjects\Fitness-App)
+2024-11-11 23:28:06 - No active profile set, falling back to 1 default profile: "default"
+2024-11-11 23:28:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-11 23:28:08 - Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+2024-11-11 23:28:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-11 23:28:08 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-11 23:28:08 - HHH000026: Second-level cache disabled
+2024-11-11 23:28:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-11 23:28:09 - HikariPool-1 - Starting...
+2024-11-11 23:28:09 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-11 23:28:09 - HikariPool-1 - Start completed.
+2024-11-11 23:28:10 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-11 23:28:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:28:11 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-11 23:28:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-11 23:28:12 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-11-11 23:28:12 - Started FitnessAppApplicationTests in 5.923 seconds (process running for 7.278)
+2024-11-11 23:28:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:28:13 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:28:13 - HikariPool-1 - Shutdown completed.
+2024-11-11 23:31:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-11 23:31:08 - HikariPool-1 - Shutdown initiated...
+2024-11-11 23:31:08 - HikariPool-1 - Shutdown completed.
